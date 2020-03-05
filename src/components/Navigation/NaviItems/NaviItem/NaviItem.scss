@@ -1,0 +1,44 @@
+@import "../../../../library";
+
+.navi-item {
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+
+  @media (min-width: $phone) {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+  }
+
+  &__link {
+    color: #8f5c2c;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+
+    @media (min-width: $phone) {
+      color: white;
+      height: 100%;
+      width: auto;
+      padding: 16px 10px;
+      border-bottom: 4px solid transparent;
+    }
+    &_current {
+      @extend .navi-item__link;
+      color: #40a4c8;
+      @media (min-width: $phone) {
+        color: white;
+        background-color: #8f5c2c;
+        border-bottom: 4px solid #40a4c8;
+      }
+    }
+  }
+
+  &:hover {
+  }
+  &:active {
+  }
+}

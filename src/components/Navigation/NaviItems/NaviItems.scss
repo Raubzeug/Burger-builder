@@ -1,0 +1,13 @@
+@import "../../../library";
+
+.navigation-items {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+
+  @media (min-width: $phone) {
+    flex-flow: row;
+  }
+}

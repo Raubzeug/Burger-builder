@@ -1,0 +1,12 @@
+.switcher {
+  height: 100%;
+  width: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+
+  &__line {
+    height: 3px;
+    background-color: white;
+  }
+}

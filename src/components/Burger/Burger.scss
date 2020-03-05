@@ -1,0 +1,18 @@
+@import "../../library";
+
+.burger {
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  height: 300px;
+  overflow: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: $main-font-size;
+
+  @media (max-width: $tablet) {
+    width: 80%;
+    min-width: 200px;
+    height: 300px;
+  }
+}

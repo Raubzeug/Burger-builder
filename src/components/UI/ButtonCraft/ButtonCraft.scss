@@ -1,0 +1,39 @@
+.button-craft {
+  display: inline-block;
+  font: inherit;
+  color: white;
+  padding: 5px;
+  margin: 0 5px;
+  min-width: 80px;
+  outline: none;
+  border: 1px solid #aa6817;
+  cursor: pointer;
+
+  &_dark {
+    @extend .button-craft;
+    background-color: #8f5e1e;
+
+    &:active,
+    &:hover {
+      background-color: #99703f;
+    }
+  }
+  &_light {
+    @extend .button-craft;
+    background-color: #d39952;
+
+    &:active,
+    &:hover {
+      background-color: #daa972;
+    }
+  }
+  &:disabled {
+    background-color: #ac9980;
+    border: 1px solid #7e7365;
+    color: #ccc;
+    cursor: default;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}

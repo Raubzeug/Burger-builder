@@ -1,0 +1,36 @@
+@import "../../../library";
+
+.toolbar {
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #703b09;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 90;
+
+  &__navigation {
+    height: 100%;
+
+    @media (max-width: $phone) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    height: 80%;
+  }
+
+  &__switcher {
+    height: 80%;
+
+    @media (min-width: $phone) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../../library";
+
+.side-drawer {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  width: 280px;
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: white;
+  padding: 32px 16px;
+  transition: transform 0.3s ease-out;
+
+  &__logo {
+    height: 10%;
+    margin-bottom: 32px;
+  }
+
+  &__remove {
+    height: 5%;
+    width: 30px;
+    align-self: center;
+
+    &__line {
+      height: 4px;
+      background-color: black;
+    }
+  }
+
+  @media (min-width: $phone) {
+    display: none;
+  }
+  &-open {
+    @extend .side-drawer;
+    transform: translateX(0);
+  }
+  &-close {
+    @extend .side-drawer;
+    transform: translateX(-100%);
+  }
+}

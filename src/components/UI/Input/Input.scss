@@ -1,0 +1,31 @@
+.input-box {
+  padding: 10px;
+  width: 100%;
+}
+
+.input-box__label {
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-box__input {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  padding: 6px 10px;
+}
+
+.input-box__input:focus {
+  outline: none;
+  background-color: #ccc;
+}
+
+.input-box__input-invalid {
+  color: red;
+  background-color: salmon;
+}
