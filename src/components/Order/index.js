@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Order.scss";
 
-const order = props => {
+const order = (props) => {
   let ingredients = [];
   for (let ingredient in props.orderData["ingredients"]) {
     if (props.orderData["ingredients"][ingredient]) {
@@ -13,7 +13,6 @@ const order = props => {
       );
     }
   }
-
   return (
     <div className="order">
       <p>
@@ -22,7 +21,7 @@ const order = props => {
       {ingredients}
       <br />
       <p>
-        <strong>Price:</strong>
+        <strong>Price: {props.orderData["price"]}</strong>
       </p>
     </div>
   );

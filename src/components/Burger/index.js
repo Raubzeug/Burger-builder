@@ -3,7 +3,7 @@ import React from "react";
 import "./Burger.scss";
 import BurgerIngredient from "./BurgerIngredient";
 
-const burger = props => {
+const burger = (props) => {
   let transformedIngredients = Object.entries(props.ingredients)
     .map(([el, quant]) =>
       [...Array(quant)].map((_, i) => (

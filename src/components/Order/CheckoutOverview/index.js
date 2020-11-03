@@ -5,7 +5,7 @@ import Button from "../../UI/ButtonCraft";
 
 import "./CheckoutOverview.scss";
 
-const checkoutOverview = props => {
+const checkoutOverview = (props) => {
   return (
     <div className="checkout">
       <h1>Your great choice!</h1>

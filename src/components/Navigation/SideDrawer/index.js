@@ -4,7 +4,7 @@ import Logo from "../../Logo";
 import NavigationItems from "../NaviItems";
 import BackDrop from "../../UI/Backdrop";
 
-const sideDrawer = props => {
+const sideDrawer = (props) => {
   let backDropClasses = ["side-drawer", "side-drawer-close"];
   if (props.show) {
     backDropClasses = ["side-drawer", "side-drawer-open"];
@@ -19,8 +19,8 @@ const sideDrawer = props => {
         <div className="side-drawer__logo">
           <Logo />
         </div>
-        <nav>
-          <NavigationItems />
+        <nav onClick={props.closed}>
+          <NavigationItems isAuthenticated={props.isAuthenticated} />
         </nav>
       </div>
     </React.Fragment>

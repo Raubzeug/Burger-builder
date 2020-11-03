@@ -3,26 +3,29 @@ import React from "react";
 import "./Modal.scss";
 import Backdrop from "../Backdrop";
 
-class Modal extends React.Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return (
-      nextProps.show !== this.props.show ||
-      nextProps.children !== this.props.children
-    );
-  }
+const Modal = (props) => {
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return (
+  // nextProps.show !== this.props.show ||
+  // nextProps.children !== this.props.children
+  //   );
+  // }
 
-  render() {
-    let className = "modal-hidden";
-    if (this.props.show) {
-      className = "modal";
-    }
-    return (
-      <React.Fragment>
-        <Backdrop show={this.props.show} hide={this.props.hide} />
-        <div className={className}>{this.props.children}</div>
-      </React.Fragment>
-    );
+  let className = "modal-hidden";
+  if (props.show) {
+    className = "modal";
   }
-}
+  return (
+    <React.Fragment>
+      <Backdrop show={props.show} hide={props.hide} />
+      <div className={className}>{props.children}</div>
+    </React.Fragment>
+  );
+};
 
-export default Modal;
+export default React.memo(
+  Modal,
+  (prevProps, nextProps) =>
+    (nextProps.show === prevProps.show) &
+    (nextProps.children === prevProps.children)
+);
